@@ -1,5 +1,8 @@
 const fs = require('fs');
 
+//creating a folder
+fs.mkdirSync('unicorn');
+
 //creating a new file
 fs.writeFileSync('read.txt',"It is a good day today.");
 fs.writeFileSync('read.txt'," Very pleasant weather."); //overwrites on existing file
@@ -18,3 +21,7 @@ console.log(data);
 
 //to rename the file
 fs.renameSync('read.txt','readwrite.txt');
+
+//to delete a file
+fs.unlinkSync('readwrite.txt');
+
